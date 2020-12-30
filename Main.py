@@ -10,7 +10,7 @@ app=Flask(__name__)
 app.secret_key=os.environ.get('SecretKey')
 
 #Initialize SocetIO
-socketio=SocketIO(app, cors_allowed_origins='*')
+socketio=SocketIO(app, cors_allowed_origins='https://chat-flask-app-2020.herokuapp.com/')
 
 ROOMS=["lounge", "news", "games", "coding"]
 COLORS=["Black", "Blue", "Cian", "Gray", "Green", "Pink", "Purple", "Red", "Yellow"]
