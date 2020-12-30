@@ -16,7 +16,8 @@ ROOMS=["lounge", "news", "games", "coding"]
 COLORS=["Black", "Blue", "Cian", "Gray", "Green", "Pink", "Purple", "Red", "Yellow"]
 USERS=[]
 
-cors_allowed_origins=['http://url', 'https://url']
+#cors_allowed_origins=['http://url', 'https://url']
+cors_allowed_origins='*'
 
 @app.route("/")
 def home():
@@ -64,4 +65,4 @@ def leave(data):
 	send({'username': username, 'msg': message}, room=room)
 
 if __name__ == "__main__":
-	socketio.run(app)
+	socketio.run(app, debug=True)
