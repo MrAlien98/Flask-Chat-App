@@ -64,4 +64,4 @@ def leave(data):
 	send({'username': username, 'msg': message}, room=room)
 
 if __name__ == "__main__":
-	app.run()
+	socketio.run(app)
