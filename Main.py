@@ -10,14 +10,14 @@ app=Flask(__name__)
 app.secret_key=os.environ.get('SecretKey')
 
 #Initialize SocetIO
-socketio=SocketIO(app)
+socketio=SocketIO(app, cors_allowed_origins='*')
 
 ROOMS=["lounge", "news", "games", "coding"]
 COLORS=["Black", "Blue", "Cian", "Gray", "Green", "Pink", "Purple", "Red", "Yellow"]
 USERS=[]
 
 #cors_allowed_origins=['http://url', 'https://url']
-cors_allowed_origins='*'
+#cors_allowed_origins='*'
 
 @app.route("/")
 def home():
