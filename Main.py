@@ -16,6 +16,8 @@ ROOMS=["lounge", "news", "games", "coding"]
 COLORS=["Black", "Blue", "Cian", "Gray", "Green", "Pink", "Purple", "Red", "Yellow"]
 USERS=[]
 
+cors_allowed_origins=['http://url', 'https://url']
+
 @app.route("/")
 def home():
 	return "Hello, <h1>this is the main page</h1>"
